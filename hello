@@ -1,0 +1,671 @@
+Sr 	Program statement	done	Learn/chit
+1.	 	Write a Python program to display your name using Interactive Mode.
+
+print("hello, im rajul")
+		
+2.		Write a Python program to display “MSBTE” using Script Mode
+
+print("MSBTE")
+		
+3.		Write a program to convert U.S. dollars to Indian rupees.
+
+diff = 83.10  
+dollar = float(input("Enter amount in U.S. dollars: "))
+rupee = dollar * diff
+print(f"{dollar} U.S. dollars = {rupee:.2f} Indian rupees")
+		
+4.		Write a program to convert bits to Megabytes, Gigabytes and Terabytes
+
+
+bits = float(input("Enter number of bits: "))
+
+mb = bits / (8 * 1024 * 1024)
+gb = bits / (8 * 1024 * 1024 * 1024)
+tb = bits / (8 * 1024 * 1024 * 1024 * 1024)
+
+print("Megabytes:", mb)
+print("Gigabytes:", gb)
+print("Terabytes:", tb)
+		
+5.		Write a program to find the square root of a number
+
+import math
+num = float(input("Enter a number: "))
+sqrt = math.sqrt(num)
+print("Square root of", num, "is", sqrt)
+
+
+OR
+
+
+
+num = float(input("Enter a number: "))
+# Square root using exponentiation
+sqrt = num ** 0.5
+print("Square root of", num, "is", sqrt)		
+6.		Write a program to find the area of Rectangle
+
+
+length = float(input("Enter the length of the rectangle: "))
+width = float(input("Enter the width of the rectangle: "))
+area = length * width
+print("Area of the rectangle is:", area)
+		
+7.		Write a program to calculate area and perimeter of the square
+
+side = float(input("Enter the side length of the square: "))
+area = side * side
+perimeter = 4 * side
+print("Area of the square is:", area)
+print("Perimeter of the square is:", perimeter)		
+8.		Write a program to calculate surface volume and area of a cylinder.
+
+radius = float(input("Enter the radius of the cylinder: "))
+height = float(input("Enter the height of the cylinder: "))
+pi = 3.14159
+surface_area = 2 * pi * radius * (radius + height)
+volume = pi * radius * radius * height
+print("Surface Area of the cylinder is:", surface_area)
+print("Volume of the cylinder is:", volume)		
+9.		Write a program to swap the value of two variables
+
+a = 5
+b = 10
+print("Before swapping:")
+print("a =", a)
+print("b =", b)
+a, b = b, a
+print("\n After swapping:")
+print("a =", a)
+print("b =", b)		
+10.		Write a program to check whether a number is even or odd
+
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(f"{num} is an even number.")
+else:
+    print(f"{num} is an odd number.")		
+11.		Write a program to find out absolute value of an input number
+
+num = float(input("Enter a number: "))
+absolute_value = abs(num)
+print(f"The absolute value of {num} is {absolute_value}.")		
+12.		Write a program to check the largest number among the three numbers
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+if num1 >= num2 and num1 >= num3:
+    largest = num1
+elif num2 >= num1 and num2 >= num3:
+    largest = num2
+else:
+    largest = num3
+print(f"The largest number is {largest}.")		
+13.		Write a program to check if the input year is a leap year of not
+
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")		
+14.		Write a program to check if a Number is Positive, Negative or Zero
+
+num = float(input("Enter a number: "))
+if num > 0:
+    print(f"{num} is a positive number.")
+elif num < 0:
+    print(f"{num} is a negative number.")
+else:
+    print("The number is zero.")		
+15.		Write a program that takes the marks of 5 subjects and displays the grade.
+
+marks1 = float(input("Enter marks for subject 1: "))
+marks2 = float(input("Enter marks for subject 2: "))
+marks3 = float(input("Enter marks for subject 3: "))
+marks4 = float(input("Enter marks for subject 4: "))
+marks5 = float(input("Enter marks for subject 5: "))
+
+average = (marks1 + marks2 + marks3 + marks4 + marks5) / 5
+
+if average >= 90:
+    grade = "A"
+elif average >= 80:
+    grade = "B"
+elif average >= 70:
+    grade = "C"
+elif average >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+print(f"Your average marks are: {average}")
+print(f"Your grade is: {grade}")		
+16.		Write a Python program to print all even numbers between 1 to 100 using while loop.
+
+print("Even numbers between 1 to 100:")
+num=2
+while num <= 100:
+    print(num)
+    num += 2		
+17.		Write a Python program to find the sum of first 10 natural numbers using for loop
+
+sum = 0
+for num in range(1, 11):
+    sum += num
+print("The sum of the first 10 natural numbers is:", sum)		
+18.		Write a Python program to print Fibonacci series
+
+n = int(input("Enter the number of terms: "))
+a, b = 0, 1
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a + b		
+19.		Write a Python program to calculate factorial of a number
+
+num = int(input("Enter a number: "))
+factorial = 1
+for i in range(1, num + 1):
+    factorial *= i
+print(f"The factorial of {num} is {factorial}.")		
+20.		Write a Python Program to Reverse a Given Number
+
+num = int(input("Enter a number: "))
+reversed_num = 0
+while num > 0:
+    digit = num % 10
+    reversed_num = reversed_num * 10 + digit
+    num //= 10
+print(f"The reversed number is {reversed_num}.")		
+21.		Write a Python program takes in a number and finds the sum of digits in a number.
+
+num = int(input("Enter a number: "))
+sum_of_digits = 0
+
+while num > 0:
+    digit = num % 10
+    sum_of_digits += digit
+    num //= 10
+
+print(f"The sum of digits is {sum_of_digits}.")		
+22.		Write a Python program that takes a number and checks whether it is a palindrome or not
+
+num = int(input("Enter a number: "))
+original_num = num
+reversed_num = 0
+
+while num > 0:
+    digit = num % 10
+    reversed_num = reversed_num * 10 + digit
+    num //= 10
+
+if original_num == reversed_num:
+    print(f"{original_num} is a palindrome.")
+else:
+    print(f"{original_num} is not a palindrome.")		
+23.		Write a Python program to sum all the items in a list.
+
+numbers = [1, 2, 3, 4, 5]
+total = sum(numbers)
+
+print(f"The sum of all items in the list is {total}.")		
+24.		Write a Python program to multiplies all the items in a list.
+
+numbers = [1, 2, 3, 4, 5]
+result = 1
+
+for num in numbers:
+    result *= num
+
+print(f"The product of all items in the list is {result}.")		
+25.		Write a Python program to get the largest number from a list.
+
+numbers = [1, 2, 3, 4, 5]
+largest = max(numbers)
+
+print(f"The largest number in the list is {largest}.")		
+26.		Write a Python program to get the smallest number from a list.
+
+numbers = [1, 2, 3, 4, 5]
+smallest= min(numbers)
+
+print(f"The largest number in the list is {lsmallest}.")		
+27.		Write a Python program to reverse a list.
+
+numbers = [1, 2, 3, 4, 5]
+reversed_list = numbers[::-1]
+
+print(f"The reversed list is {reversed_list}.")		
+28.		Write a Python program to find common items from two lists.
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+
+common_items = list(set(list1) & set(list2))
+
+print(common_items)		
+29.		Write a Python program to select the even items of a list.
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+even_items = [item for item in numbers if item % 2 == 0]
+
+print(even_items)		
+30.		Create a tuple and find the minimum and maximum number from it.
+
+numbers = (1, 2, 3, 4, 5, 6, 7, 8)
+min_num = min(numbers)
+max_num = max(numbers)
+
+print(f"Minimum number: {min_num}")
+print(f"Maximum number: {max_num}")		
+31.		Write a Python program to find the repeated items of a tuple.
+
+numbers = (1, 2, 3, 4, 5, 6, 4, 5, 6)
+
+repeated_items = []
+
+for item in numbers:
+    if numbers.count(item) > 1 and item not in repeated_items:
+        repeated_items.append(item)
+
+print("Repeated items:", repeated_items)		
+32.		Print the number in words for Example: 1234 => One Two Three Four
+
+num = input("Enter a number: ")
+
+num_to_words = {
+    '0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three', '4': 'Four',
+    '5': 'Five', '6': 'Six', '7': 'Seven', '8': 'Eight', '9': 'Nine'
+}
+
+words = [num_to_words[digit] for digit in num]
+
+print(" ".join(words))		
+33.		Write a Python program to create a set, add member(s) in a set and remove one item from set.
+
+my_set = {1, 2, 3, 4}
+
+my_set.add(5)
+my_set.add(6)
+
+my_set.remove(3)
+
+print(my_set)		
+34.		Write a Python program to perform following operations on set: intersection of sets, union of sets, set difference, symmetric difference, clear a set
+
+# Create two sets
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+# Intersection of sets
+intersection = set1 & set2
+print("Intersection:", intersection)
+
+# Union of sets
+union = set1 | set2
+print("Union:", union)
+
+# Set difference
+difference = set1 - set2
+print("Difference (set1 - set2):", difference)
+
+# Symmetric difference
+symmetric_difference = set1 ^ set2
+print("Symmetric Difference:", symmetric_difference)
+
+# Clear a set
+set1.clear()
+print("Set1 after clear:", set1)		
+35.		Write a Python program to find maximum and the minimum value in a set.
+
+my_set = {10, 20, 30, 40, 50}
+
+max_value = max(my_set)
+min_value = min(my_set)
+
+print("Maximum value:", max_value)
+print("Minimum value:", min_value)		
+36.		Write a Python program to find the length of a set.
+
+my_set = {5, 10, 15, 20, 25}
+
+print("Length of the set:", len(my_set))		
+37.		Write a Python script to sort (ascending and descending) a dictionary by value.
+
+d1 = {'a': 10, 'b': 2, 'c': 6}
+print("original dictoniary:", d1)
+l=list(d1.values())
+l.sort()
+print(l)		
+38.		Write a Python script to concatenate following dictionaries to create a new one. Sample Dictionary: 
+a.	dic1 = {1:10, 2:20} 
+b.	dic2 = {3:30, 4:40} 
+c.	dic3 = {5:50,6:60}
+
+dic1 = {1: 10, 2: 20}
+dic2 = {3: 30, 4: 40}
+dic3 = {5: 50, 6: 60}
+
+# Combine all into one dictionary
+new_dic = {**dic1, **dic2, **dic3}
+
+print("Concatenated Dictionary:", new_dic)		
+39.		Write a Python program to combine two dictionary adding values for common keys.
+d1 = {'a': 100, 'b': 200, 'c':300}
+d2 = {'a': 300, 'b': 200, 'd':400}
+
+d1 = {'a': 100, 'b': 200, 'c': 300}
+d2 = {'a': 300, 'b': 200, 'd': 400}
+for k in d1:
+    if k in d2:
+     d2[k]=d1[k]+d2[k]
+
+print("Combined", d2)
+		
+40.		Write a Python program to print all unique values in a dictionary.
+Sample Data: [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"}, {"VIII":"S007"}]
+
+data = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"},
+        {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},
+        {"VIII":"S007"}]
+
+unique_values = set()
+
+for item in data:
+    for value in item.values():
+        unique_values.add(value)
+
+print("Unique Values:", unique_values)		
+41.		Write a Python program to find the highest 3 values in a dictionary
+
+data = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
+        {"VI": "S005"}, {"VII": "S005"}, {"V": "S009"},
+        {"VIII": "S007"}]
+
+# Extract all values from list of dictionaries
+values = []
+
+for d in data:
+    for v in d.values():
+        values.append(v)
+
+# Remove duplicates and sort
+unique_values = sorted(set(values), reverse=True)
+
+# Print top 3
+for i in range(3):
+    print(unique_values[i])
+		
+42.		Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters.
+
+s = input()
+
+upper = 0
+lower = 0
+
+for char in s:
+    if char.isupper():
+        upper += 1
+    elif char.islower():
+        lower += 1
+    else:
+        pass
+        
+print("Uppercase letters:", upper)
+print("Lowercase letters:", lower))		
+43.		Write a Python program to generate a random float where the value is between 5 and 50 using Python math module.
+
+import random
+
+num = random.uniform(5, 50)
+print(num)		
+44.		Write a Python function that takes a number as a parameter and check the number is prime or not.
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            return False
+    return True
+
+# Example usage
+num = int(input("Enter a number: "))
+if is_prime(num):
+    print("Prime number")
+else:
+    print("Not a prime number")		
+45.		Write a Python function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
+
+def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+# Example usage
+num = int(input("Enter a number: "))
+print("Factorial:", factorial(num))		
+46.		Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters.
+
+def count(s):
+    upper = 0
+    lower = 0
+    for char in s:
+        if char.isupper():
+            upper += 1
+        elif char.islower():
+            lower += 1
+    print("Uppercase letters:", upper)
+    print("Lowercase letters:", lower)
+
+count(input("Enter a string:"))		
+47.		Write a Python program to create a user defined module that will ask your college name and will display the name of the college
+
+
+# college_module.py
+def ask_college_name():
+    college_name = input("Enter your college name: ")
+    return college_name
+
+
+# main_program.py
+import college_module
+
+college_name = college_module.ask_college_name()
+print("Your college name is:", college_name)		
+48.		Write a Python program that will calculate area and circumference of circle using inbuilt Math Module
+
+import math
+
+# Input radius from user
+radius = float(input("Enter the radius of the circle: "))
+
+# Calculate area and circumference
+area = math.pi * radius * radius
+circumference = 2 * math.pi * radius
+
+# Display the results
+print("Area of the circle:", area)
+print("Circumference of the circle:", circumference)		
+49.		Write a Python program that will display Calendar of given month using Calendar Module
+
+import calendar
+
+# Input year and month from user
+year = int(input("Enter the year (e.g., 2025): "))
+month = int(input("Enter the month (1-12): "))
+
+# Display the calendar for the given month and year
+print(calendar.month(year, month))		
+50.		Write a Python program to create two matrices and perform addition, subtraction, multiplication and division operation on matrix.
+
+import numpy as np
+
+# Create two matrices
+A = np.array([[1, 2], [3, 4]])
+B = np.array([[5, 6], [7, 8]])
+
+# Matrix addition using numpy function
+addition = np.add(A, B)
+print("Addition of matrices:")
+print(addition)
+
+# Matrix subtraction using numpy function
+subtraction = np.subtract(A, B)
+print("Subtraction of matrices:")
+print(subtraction)
+
+# Matrix multiplication using numpy function
+multiplication = np.matmul(A, B)
+print("Multiplication of matrices:")
+print(multiplication)
+
+# Element-wise division using numpy function
+division = np.divide(A, B)
+print("Element-wise division of matrices:")
+print(division)		
+51.		Write a Python program to concatenate two strings.
+
+# Taking input from the user
+str1 = input("Enter the first string: ")
+str2 = input("Enter the second string: ")
+
+# Concatenating the strings
+result = str1 + str2
+
+# Printing the concatenated result
+print("The concatenated string is:", result)		
+52.		Write a NumPy program to generate six random integers between 10 and 30.
+
+import numpy as np
+
+# Generate six random integers between 10 and 30
+random_integers = np.random.randint(10, 31, 6)
+
+print("Six random integers between 10 and 30:", random_integers)		
+53.		Write a Python program to create a class to print the area of a square and a rectangle. The class has two methods with the same name but different number of parameters. The method for printing area of rectangle has two parameters which are length and breadth respectively while the other method for printing area of square has one parameter which is side of square.
+
+
+class AreaCalculator:
+    def area(self, a, b=None):
+        if b is None:
+            print("Area of Square:", a * a)
+        else:
+            print("Area of Rectangle:", a * b)
+obj = AreaCalculator()
+
+# Call area methods
+obj.area(5)        # Square with side 5
+obj.area(4, 6)     # Rectangle with length 4 and breadth 6		
+54.		Write a Python program to create a class 'Degree' having a method 'getDegree' that prints "I got a degree". It has two subclasses namely 'Undergraduate' and 'Postgraduate' each having a method with the same name that prints "I am an Undergraduate" and "I am a Postgraduate" respectively. Call the method by creating an object of each of the three classes
+
+class Degree:
+    def getDegree(self):
+        print("I got a degree")
+
+class Undergraduate(Degree):
+    def getDegree(self):
+        print("I am an Undergraduate")
+
+class Postgraduate(Degree):
+    def getDegree(self):
+        print("I am a Postgraduate")
+
+# Creating objects
+d = Degree()
+ug = Undergraduate()
+pg = Postgraduate()
+
+# Calling methods
+d.getDegree()
+ug.getDegree()
+pg.getDegree()		
+55.		Create a class Employee with data members: name, department and salary. Create suitable methods for reading and printing employee information
+
+class Employee:
+    def __init__(self):
+        self.name = ""
+        self.department = ""
+        self.salary = 0
+
+    def read_info(self):
+        self.name = input("Enter employee name: ")
+        self.department = input("Enter department: ")
+        self.salary = float(input("Enter salary: "))
+
+    def print_info(self):
+        print("Employee Name:", self.name)
+        print("Department:", self.department)
+        print("Salary:", self.salary)
+
+# Example usage
+emp = Employee()
+emp.read_info()
+emp.print_info()		
+56.		Python program to read and print students information using two classes using simple inheritance.
+
+class StudentInfo:
+    def __init__(self):
+        self.name = input("Enter name: ")
+        self.roll = input("Enter roll number: ")
+
+class StudentMarks(StudentInfo):
+    def __init__(self):
+        super().__init__()
+        self.marks = input("Enter marks: ")
+
+    def display(self):
+        print("Name:", self.name)
+        print("Roll Number:", self.roll)
+        print("Marks:", self.marks)
+
+# Example usage
+s = StudentMarks()
+s.display()		
+57.		Write a Python program to implement multiple inheritance.
+
+class Person:
+    def get_name(self):
+        self.name = input("Enter name: ")
+
+class Marks:
+    def get_marks(self):
+        self.marks = input("Enter marks: ")
+
+class Student(Person, Marks):
+    def display(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+
+# Example usage
+s = Student()
+s.get_name()
+s.get_marks()
+s.display()		
+58.		Write a Python program to Check for ZeroDivisionError Exception.
+
+try:
+    a = int(input("Enter numerator: "))
+    b = int(input("Enter denominator: "))
+    result = a / b
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")		
+59.		Write a Python program to create user defined exception that will check whether the password is correct or not?
+
+class PasswordError(Exception):
+    pass
+
+password = "admin123"
+
+user_input = input("Enter password: ")
+
+try:
+    if user_input != password:
+        raise PasswordError("Incorrect Password!")
+    else:
+        print("Access Granted!")
+except PasswordError as e:
+    print(e)		
+
